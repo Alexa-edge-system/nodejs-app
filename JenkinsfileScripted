@@ -1,0 +1,46 @@
+```groovy
+pipeline {
+    agent any
+
+    environment {
+        NODEJS_HOME = tool name: 'nodejs15.2.1', type: 'nodejs'
+        PATH = "${NODEJS_HOME}/bin:${env.PATH}"
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'master',
+                    credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65',
+                    url: 'https://github.com/LandmakTechnology/nodejs-application.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('MySonarQubeServer') {
+                    sh 'npm run sonar'
+                }
+            }
+        }
+
+        stage('Publish to Nexus') {
+            steps {
+                sh 'npm publish'
+            }
+        }
+
+        stage('Run Application') {
+            steps {
+                sh 'nohup npm start &'
+            }
+        }
+    }
+}
+```
