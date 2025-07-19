@@ -10,9 +10,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master',
+                git branch: 'main',
                     credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65',
-                    url: 'https://github.com/LandmakTechnology/nodejs-application.git'
+                    url: 'https://github.com/Alexa-edge-system/nodejs-app'
             }
         }
 
