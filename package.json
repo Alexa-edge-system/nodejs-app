@@ -26,13 +26,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LandmakTechnology/nodejs-application"
+    "url": "https://github.com/Alexa-edge-system/nodejs-app"
   },
   "keywords": [
     "node",
-    "Landmark Technologies",
+    "Alexa edge systems",
     "express"
   ],
   "author": "Simon Legah",
-  "license": "MyLandmarkTech"
+  "license": "Alexaedge"
 }
