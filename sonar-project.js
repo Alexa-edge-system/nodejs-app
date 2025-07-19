@@ -6,7 +6,7 @@ sonarqubeScanner({
 	    'sonar.projectDescription': 'This is a Node JS application',
 	    'sonar.projectName': 'Node JS Application - Sample',
 	    'sonar.projectKey':'NodeJsAlexaedgesystems',
-	    'sonar.login': '76e85b03959989e83da64b98633cd9311a76a530',
+	    'sonar.login': 'f7a5d76946e681d284c8a4104db3e90984c9699e',
 	    //'sonar.password': 'admin',
             'sonar.projectVersion':'1.0',
 	    'sonar.language':'js',
