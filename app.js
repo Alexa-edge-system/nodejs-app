@@ -23,7 +23,7 @@ app.get('/landmarktechnologies', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app develpoed by MyLandmarkTech</h2>");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
-    response.write("<h2><center>Welcome to  Landmark Technologies. Please Contact +14372152483 for more information or send an email to info@mylandmarktech.com <center></h2>" );
+    response.write("<h2><center>Welcome to  Alexa edge systems . Please Contact +33 609878741 for more information or send an email to alexaedgesystems@gmail.com <center></h2>" );
     response.end();
     
   })
@@ -44,10 +44,10 @@ app.get("/html", function(req,res){
         //res.type('application/json');
         //res.json({'name': 'S. Legah'});
         res.send({
-		'name': 'Landmark Technologies',
+		'name': 'Alexa edge',
 		'technology': 'DevOps',
-		'contact' : '+14372152483',
-		'email': 'info@mylandmarktech.com'
+		'contact' : '+33 609878741',
+		'email': 'alexaedgesystems@gmail.com'
 	            });
         
         });
@@ -70,11 +70,11 @@ app.get("/status-code-500", function(req, res) {
 
 app.get('/redirect', function(req, res) {
     //Send status 300
-        res.redirect('http://mylandmarktech.com');
+        res.redirect('https://alexaedgesystems.com/');
     });
     
  
     app.listen(app.get('port'), function() {
-        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/landmarktechnologies");
+        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/alexaedgesystems");
       })
     
